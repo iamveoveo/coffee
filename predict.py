@@ -2,15 +2,19 @@ import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
 import pickle
+import sys 
+import os
+sys.path.append(os.path.abspath("/home/veo/veo/coffee/train"))
+from training import training
 
-pickled_model = pickle.load(open('train\\model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
-a = []
-input_ = 0
-while (len(a)<11):
-    input_ = input('nhap vao cac he so mong muon\n[Aroma,Flavor,Aftertaste,Acidity,Body,Balance,Uniformity,Clean.Cup,Sweetness,Cupper.Points,Total.Cup.Points]')
-    a.append(input_)
-    print(a)
+input_ = input('1: Train model\n2: Show cluster centers\n3: Show diagram\n')
 
-predictions = pickled_model.predict([a])
-print(predictions)
+if(input_=='1'):
+    trained = training()
+    if(trained):
+        model = trained
+elif(input_==2):
+    a = 0
+
