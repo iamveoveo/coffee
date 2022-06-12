@@ -18,7 +18,7 @@ def showModel(model):
             if (option_ == '1'):
                 print(model.cluster_centers_)
             elif (option_ == '2'):
-                print(model.labels_)
+                print(*model.labels_)
             elif (option_ == '3'):
                 print(model.inertia_)
             elif (option_ == '4'):
