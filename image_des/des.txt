@@ -1,0 +1,137 @@
+chương trình được viết bằng ngôn ngữ python với các thư viện được sử dụng là:
+Numpy
+Pandas
+Pickle
+Sklearn
+Matplotlib
+
+Chương trình bao gồm
+config.py: File các thông só cơ bản của chương trìn
+arabica_data_extracted.csv: File chứa dữ liệu sử dụng để làm đầu vào cho chương trình
+extract_data.py: File thực hiện trích xuất dữ liệu, tạo ra file arabica_data_extracted.csv
+training.py: File chứa các hàm thực hiện huấn luyện mô hình và lưu mô hình
+model.pkl: File chứa mô hình đã được huấn luyện
+show.py: File chứa các hàm hiển thị
+main.py: File chính của chương trình thực hiện gọi các hàm trong các file khác
+
+Các hàm bao gồm:
+training():	
+		Hàm sử dụng để huấn luyện và lưu mô hình vào file model.pkl
+		Không có tham số truyền vào
+		Trả về model đã được huấn luyện hoặc flase khi gặp lỗi
+		Nằm trong file training.py
+inputCustomizeParameter():
+		Hàm lấy các tham số mong muốn của người dùng để phục vụ cho việc huấn luyện model
+		Không có tham số truyền vào
+		Trả về mảng tham số mà người dùng nhập hoặc flase khi gặp lỗi
+		Nằm trong file training.py
+showModel(model):
+		Hàm hiển thị các thông số của model
+		Tham số truyền vào là một model
+		Trả về boolean
+		Nằm trong file show.py
+showDiagram(lbls):
+		Hàm hiển thị biểu đồ scatter giữa 2 cột dữ liệu chỉ định
+		Tham số truyền vào là mảng nhãn của từng điểm dữ liệu
+		Trả về boolean
+		Nằm trong file show.py
+drawScatter(feature_name, labels):
+		Hàm vẽ biểu đồ scatter giữa 2 cột dữ liệu chỉ định
+		Tham số truyền vào là mảng tên các cột cần vẽ và nhãn của từng điểm dữ liệu
+		Trả về boolean
+		Nằm trong file show.py
+showData():
+		Hàm hiển thị dữ liệu được sử dụng
+		Không có tham số truyền vào
+		Trả về boolean
+		Nằm trong file show.py
+
+Khi chạy chương trình cần chú ý thay đổi cái thông số trong file config.py cho phù hợp với cấu hình của máy.
+Chương trình khởi chạy hiển thị các tùy chọn mà người dùng có thể chọn. Người dùng nhập vào tùy chọn muốn sử dụng các tùy chọn bao gồm:
+Train model
+Show model
+Show diagram
+show data
+exit
+(hình ảnh menu)
+
+1) Train model
+
+Có thể chọn sử dụng tham số mặc định hoặc tham số tùy chỉnh
+(hình ảnh của menu chọn tùy chỉnh)
+
+Khi chọn mặc định model sẽ sử dụng các thông số măc định đã được cài đặt 
+(hình ảnh tham số mặc định)
+
+với Tham số tùy chỉnh thì người dùng sẽ được nhập vào các thông tin về:
+số cụm (n_cluster)
+số lần khởi tạo (n_init)
+số vòng lặp tối đa (n_inter)
+Tùy chọn việc khởi tạo các điểm là ngẫu nhiên hay được nhập vào
+(hình ảnh train model vs điểm khởi tạo ngẫu nhiên)
+(hình ảnh train model vs điểm khởi tạo được nhập vào)
+
+2) Show model
+
+Hiển thị menu tùy chọn cho hiển thị thông tin model gồm:
+Cluster centers.
+Label of each data point.
+Sum of squared distances.
+Number of iterations run.
+Abort
+(hình ảnh menu show model)
+
+Cluster centers: hiển thị các tâm cụm được tìm thấy
+(hình ảnh tâm)
+
+Label of each data point: hiển thị nhãn cho từng điểm dữ liệu
+(Hình ảnh nhãn)
+
+Sum of squared distances: hiển thị tổng bình phương khoảng cách từ các điểm tới tâm gần nó nhất
+(hình ảnh cho tổng bình phương)
+
+Number of iterations run: hiển thị số vòng lặp đã thực hiện
+(hình ảnh số vòng lặp)
+
+3) Show diagram
+Hiển thị danh sách các cột có thể lựa chọn để vẽ biểu đồ. Người dùng nhập vào tên của 2 cột muốn vẽ biểu đồ
+(hình ảnh nhập tên cột)
+
+Chương trình hiển thị biểu đồ scatter của 2 cột đã lựa chọn
+(hình ảnh biểu đồ)
+
+4) Show data
+Hiển thị tập dữ liệu đang sử dụng
+(hình ảnh tập dữ liệu)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[[ 7.73255435  7.7236413   7.605       7.70986413  7.66908967  7.71572011
+   9.95157609  9.98001359  9.96817935  7.74283967 83.79922554]
+ [ 7.38722222  7.30816092  7.18645594  7.33992337  7.35287356  7.3166092
+   9.80436782  9.88998084  9.91942529  7.24241379 80.74745211]
+ [ 7.09346154  6.86019231  6.72634615  7.11557692  7.17480769  6.87326923
+   8.64115385  7.37230769  9.01288462  6.73903846 73.60730769]]
+
+4044.0412652159093
+		

@@ -1,7 +1,7 @@
 
 class CONST:
     #path to your dataset
-    PATH_DATA_SET = 'C:\\Users\\vinhv\\Downloads\\ML\\coffee'
+    PATH_DATA_SET = '/home/veo/veo/coffee'
 
     #number of feature in your dataset
     NUM_OF_FEATURE = 11

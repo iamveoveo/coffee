@@ -40,6 +40,7 @@ def training():
 def inputCustomizeParameter():
     try:
         PARAM = CONST.PARAM
+        NUM_OF_FEATURE = CONST.NUM_OF_FEATURE
         cus_param = {}
         input_init_ = []
 
