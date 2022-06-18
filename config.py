@@ -4,7 +4,7 @@ class CONST:
     PATH_DATA_SET = '/home/veo/veo/coffee'
 
     #number of feature in your dataset
-    NUM_OF_FEATURE = 11
+    NUM_OF_FEATURE = 10
 
     #model default parameters value
     PARAM = {

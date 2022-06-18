@@ -41,7 +41,7 @@ def showModel(model):
 def showDiagram(lbls):
     try:
         feature_name = []
-        print("\nAroma\t\tFlavor\t\tAftertaste\nAcidity\t\tBody\t\tBalance\nUniformity\tClean.Cup\tSweetness\nCupper.Points\tTotal.Cup.Points")
+        print("\nAroma\t\tFlavor\t\tAftertaste\nAcidity\t\tBody\t\tBalance\nUniformity\tClean.Cup\tSweetness\nCupper.Points")
         feature_name = list(input('\nEnter 2 desired features, separated by space\n').split())
         draw_diagram = drawScatter(feature_name, lbls)
         return True
